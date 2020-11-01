@@ -1,0 +1,10 @@
+version: '2.1'
+services:
+  eureka-server:
+    build: spring-cloud\eureka-server-app
+    ports:
+      - "8761:8761"
+  user-service:
+    build: microservices\userinfo-app
+    ports:
+      - "8084:8084"
